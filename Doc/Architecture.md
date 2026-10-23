@@ -2,7 +2,7 @@
 
 ## 1. Project Overview
 
-The **AI-Powered Smart Study Planner** is an intelligent web-based study management system that creates personalized study plans based on a student's subjects, available study time, academic goals, exam dates, learning preferences, and performance.
+The **AI-Powered Smart Study Planner** is an intelligent web-based study management system that creates personalized study plans based on a student's subjects, available study time, academic goals, exam dates, learning preferences, and performance..
 
 The system uses AI/ML techniques to analyze student information and dynamically generate an optimized study schedule. It can also monitor progress, identify weak subjects, recommend revision sessions, and adapt the plan based on performance.
 
