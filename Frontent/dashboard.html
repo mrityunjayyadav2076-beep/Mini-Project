@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | StudyMate AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html"><span>✦</span> StudyMate AI</a>
+      <p class="nav-heading">MENU</p>
+      <a class="nav-link active" href="dashboard.html">▦ Dashboard</a>
+      <a class="nav-link" href="planner.html">▤ Study Planner</a>
+      <a class="nav-link" href="#subjects">◈ Subjects</a>
+      <a class="nav-link" href="#focus">◷ Focus Timer</a>
+      <div class="sidebar-bottom">
+        <button id="themeToggle" class="nav-link">☼ Toggle theme</button>
+        <button id="logoutBtn" class="nav-link">↪ Log out</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Dashboard</h1>
+          <p class="muted" id="todayDate"></p>
+        </div>
+        <div class="user-chip">👤 <span id="userName">Student</span></div>
+      </header>
+
+      <section class="welcome-banner">
+        <div>
+          <p class="eyebrow">YOUR LEARNING SPACE</p>
+          <h2 id="welcomeText">Welcome back!</h2>
+          <p>Make today a productive learning day.</p>
+          <a href="planner.html" class="btn light">Plan your day →</a>
+        </div>
+        <div class="banner-symbol">✦</div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <span class="stat-icon purple">▤</span>
+          <p class="muted">Total tasks</p>
+          <h2 id="totalTasks">0</h2>
+        </article>
+        <article class="stat-card">
+          <span class="stat-icon green">✓</span>
+          <p class="muted">Completed</p>
+          <h2 id="completedTasks">0</h2>
+        </article>
+        <article class="stat-card">
+          <span class="stat-icon orange">◷</span>
+          <p class="muted">Focus minutes</p>
+          <h2 id="focusMinutes">0</h2>
+        </article>
+        <article class="stat-card">
+          <span class="stat-icon blue">◈</span>
+          <p class="muted">Subjects</p>
+          <h2 id="subjectCount">0</h2>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <h2>Today's tasks</h2>
+              <p class="muted small">Your upcoming study activities</p>
+            </div>
+            <a href="planner.html" class="text-link">View all →</a>
+          </div>
+          <div id="dashboardTasks" class="task-list"></div>
+        </article>
+
+        <article class="panel" id="subjects">
+          <div class="panel-heading">
+            <div>
+              <h2>My subjects</h2>
+              <p class="muted small">Track your learning topics</p>
+            </div>
+            <button class="btn secondary small-btn" id="addSubjectBtn">+ Add</button>
+          </div>
+          <form id="subjectForm" class="inline-form hidden">
+            <input id="subjectName" placeholder="Subject name" maxlength="40" required>
+            <button class="btn primary small-btn">Save</button>
+          </form>
+          <div id="subjectList" class="subject-list"></div>
+        </article>
+      </section>
+
+      <section class="content-grid bottom-grid">
+        <article class="panel" id="focus">
+          <h2>Focus timer</h2>
+          <p class="muted small">Use a study and break routine.</p>
+          <div class="timer-display" id="timerDisplay">25:00</div>
+          <div class="timer-label" id="timerLabel">Focus session</div>
+          <div class="button-row center">
+            <button id="timerStart" class="btn primary">Start</button>
+            <button id="timerReset" class="btn secondary">Reset</button>
+          </div>
+          <div class="button-row center">
+            <button class="btn secondary small-btn timer-mode" data-minutes="25">Focus 25m</button>
+            <button class="btn secondary small-btn timer-mode" data-minutes="5">Break 5m</button>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h2>Study assistant</h2>
+          <p class="muted small">Ask for a study tip or planning idea.</p>
+          <form id="assistantForm" class="assistant-form">
+            <input id="assistantInput" placeholder="e.g. How do I plan revision?" maxlength="300" required>
+            <button class="btn primary" type="submit">Ask</button>
+          </form>
+          <div id="assistantReply" class="assistant-reply">
+            Hello! Tell me what you want help studying.
+          </div>
+          <!-- <p class="small muted">Demo assistant; real AI requires a backend.</p> -->
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
