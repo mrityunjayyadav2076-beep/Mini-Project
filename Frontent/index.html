@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Smart Study Planner | Welcome</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+  <main class="login-card">
+    <div class="brand-logo">✦</div>
+    <h1>Study<span>Mate AI</span></h1>
+    <p class="muted">Your personal study planning companion</p>
+
+    <form id="loginForm">
+      <label for="studentName">Your name</label>
+      <input id="studentName" type="text" placeholder="Enter your name"
+             required maxlength="40">
+
+      <label for="studyGoal">Your study goal</label>
+      <select id="studyGoal" required>
+        <option value="Prepare for exams">Prepare for exams</option>
+        <option value="Improve daily consistency">Improve daily consistency</option>
+        <option value="Learn new skills">Learn new skills</option>
+        <option value="Complete assignments">Complete assignments</option>
+      </select>
+
+      <button class="btn primary full" type="submit">
+        Get Started →
+      </button>
+    </form>
+    <p class="small muted">Your study data is saved in this browser.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
